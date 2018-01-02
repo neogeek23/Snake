@@ -13,3 +13,4 @@ Things to Do:
 1)  On screen explaination.
 2)  Visible scoring.
 3)  Make the thing prettier.
+4)  Fix a bug where inputting direction changes quickly can happen before next update causing the logic to think you've run into yourself.
