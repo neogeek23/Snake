@@ -43,16 +43,6 @@ function update(canvas, canvas_context, snek){
 function paint_background(canvas, canvas_context){
     canvas_context.fillStyle = "white";
     canvas_context.fillRect(0,0, canvas.width, canvas.height);
-    paint_board(canvas, canvas_context);
-};
-
-function paint_board(canvas, canvas_context){
-    canvas_context.fillStyle = "grey";
-    for (var i=0; i < canvas.width; i += block_size + block_space){
-        for(var j=0; j < canvas.height; j += block_size + block_space){
-            canvas_context.fillRect(i, j, block_size, block_size);
-        }
-    }
 };
 
 const Direction = {
