@@ -1,6 +1,7 @@
 window.onload=function(){
     block_size = 4;
     block_space = 1;
+    initial_tail_length = 3;
     fps = 20;
     ms_in_sec = 1000;
     setup()
@@ -38,6 +39,7 @@ function update(canvas, canvas_context, snek){
     snek.move();
     snek.trim();
     target = snek.check(target);
+    snek.score();
 };
 
 function paint_background(canvas, canvas_context){
@@ -98,7 +100,7 @@ class Snek{
     constructor(x, y, direction, board, color){
         this.head = new Block(x, y, board, color);
         this.tail = [];
-        this.length = 3;
+        this.length = initial_tail_length;
         this.alive = 0;
         this.direction = direction;
     }
@@ -174,6 +176,14 @@ class Snek{
             setup();
         }
         return target;
+    }
+
+    score(){
+        var score_element = document.getElementsByClassName("points_scored")[0];
+        var score_rate_element = document.getElementsByClassName("point_rate")[0];
+
+        score_element.innerHTML = ((this.length - initial_tail_length) * 100).toString();
+        score_rate_element.innerHTML = ((this.length - initial_tail_length) * 100/this.alive).toString();
     }
 };
 
