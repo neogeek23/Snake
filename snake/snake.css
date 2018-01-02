@@ -18,13 +18,13 @@ body{
 }
 
 .points_scored{
-    position: relative;
-    left: 0px;
+    position: absolute;
+    left: 5%;
 }
 
 .point_rate{
-    position: relative;
-    right: 0px;
+    position: absolute;
+    right: 7.5%;
 }
 
 .points_scored:before{
