@@ -1,7 +1,7 @@
 # Snake
 Recreation of classic Snake game for the browser.
 
-Game is controlled via WASD.  Running into the edge or youself results in death and starting over.  You are the red snake, hunting the green snack causing the snake to grow. You are never able to slow down; you have no regrets, and you remain hungry.
+Game is controlled via WASD.  Running into the edge or youself results in death and starting over.  You are the red snake, hunting the green snack causing the snake to grow. You are never able to slow down; you have no regrets, and you remain hungry.  Game is playable at https://neogeek23.github.io/.
 
 Things Done:
 1)  Snake created and runs
