@@ -11,6 +11,30 @@ body{
     border-radius: 4px;
 }
 
+.points_scored,
+.point_rate{
+    margin-top: 2.5%;
+    display: inline-block;
+}
+
+.points_scored{
+    position: relative;
+    left: 0px;
+}
+
+.point_rate{
+    position: relative;
+    right: 0px;
+}
+
+.points_scored:before{
+    content: 'Score:  ';
+}
+
+.point_rate:before{
+    content: 'Score/Frame:  ';
+}
+
 @media only screen and (min-width: 1000px) {
     #board{
         width: 1000px;
