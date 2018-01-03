@@ -2,7 +2,7 @@ window.onload=function(){
     block_size = 4;
     block_space = 1;
     initial_tail_length = 3;
-    fps = 20;
+    fps = 16;
     ms_in_sec = 1000;
     setup()
 };
