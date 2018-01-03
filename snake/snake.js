@@ -182,8 +182,8 @@ class Snek{
         var score_element = document.getElementsByClassName("points_scored")[0];
         var score_rate_element = document.getElementsByClassName("point_rate")[0];
 
-        score_element.innerHTML = ((this.length - initial_tail_length) * 100).toString();
-        score_rate_element.innerHTML = ((this.length - initial_tail_length) * 100/this.alive).toPrecision(5).toString();
+        score_element.innerHTML = ((this.length - initial_tail_length) * 10000).toString();
+        score_rate_element.innerHTML = ((this.length - initial_tail_length)*10000/this.alive).toPrecision(5).toString();
     }
 };
 
