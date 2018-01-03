@@ -1,0 +1,43 @@
+body{
+    text-align: center;
+    background-color: black;
+    color:white;
+}
+
+#board{
+    width: calc(95% - 2px);
+    margin-top: 5%;
+    border: 1px white solid;
+    border-radius: 4px;
+}
+
+.points_scored,
+.point_rate{
+    margin-top: 2.5%;
+    display: inline-block;
+}
+
+.points_scored{
+    position: absolute;
+    left: 5%;
+}
+
+.point_rate{
+    position: absolute;
+    right: 7.5%;
+}
+
+.points_scored:before{
+    content: 'Score:  ';
+}
+
+.point_rate:before{
+    content: 'Hot Streak:  ';
+}
+
+@media only screen and (min-width: 1000px) {
+    #board{
+        width: 1000px;
+        border-radius: 8px;
+    }
+}
