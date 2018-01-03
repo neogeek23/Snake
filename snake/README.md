@@ -8,6 +8,8 @@ Things Done:
 2)  Target randomly generated.
 3)  User controls present.
 4)  Aquiring Target growth consequence.
+5)  Scoring.
+6)  Instructions.
 
 Things to Do:
 1)  Fix a bug where inputting direction changes quickly can happen before next update causing the logic to think you've run into yourself.
