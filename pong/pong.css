@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+    background-color: black;
+    color:white;
+}
+
+#board{
+    width: calc(95% - 2px);
+    margin-top: 5%;
+    border: 1px white solid;
+    border-radius: 4px;
+}
+
+.human_points,
+.bot_points{
+    margin-top: 2.5%;
+    display: inline-block;
+}
+
+.human_points{
+    position: absolute;
+    left: 5%;
+}
+
+.bot_points{
+    position: absolute;
+    right: calc(4% + 3ch);
+}
+
+.human_points:before{
+    content: 'Home Team:  ';
+}
+
+.bot_points:before{
+    content: 'Hal Team:  ';
+}
