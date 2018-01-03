@@ -165,6 +165,7 @@ class Snek{
         this.alive++;
         if (target.get_block_x() == this.head.get_block_x() && target.get_block_y() == this.head.get_block_y()){
             this.length++;
+            this.alive = 0;
             var canvas_context = this.head.get_board();
             var canvas = canvas_context.canvas;
             return new Block(Math.floor(Math.random() * (canvas.width/(block_size + block_space) - 1)),
@@ -182,8 +183,8 @@ class Snek{
         var score_element = document.getElementsByClassName("points_scored")[0];
         var score_rate_element = document.getElementsByClassName("point_rate")[0];
 
-        score_element.innerHTML = ((this.length - initial_tail_length) * 10000).toString();
-        score_rate_element.innerHTML = ((this.length - initial_tail_length)*10000/this.alive).toPrecision(5).toString();
+        score_element.innerHTML = (this.length - initial_tail_length).toString();
+        score_rate_element.innerHTML = ((this.length - initial_tail_length) * 200/this.alive).toPrecision(5).toString();
     }
 };
 
