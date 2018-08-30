@@ -8,12 +8,12 @@ class ChessBot{
         this.color = color;
     }
 
-    makeMove(game, board, source, target){
+    makeMove(game, board){
         let nextMove = undefined;
         if (this.difficulty === 'Random'){
-            nextMove = this.determineSimplestBotMove(game, source, target);
+            nextMove = this.determineSimplestBotMove(game);
         } else if (this.difficulty === 'Easy') {
-            nextMove = this.determineNextBestBotMoveOneMoveDeep(game, source, target);
+            nextMove = this.determineNextBestBotMoveOneMoveDeep(game);
         } else if (this.difficulty === 'Medium'){
             let depth = Math.floor(Math.random() * 1 + 2);
             console.clear();
@@ -29,7 +29,7 @@ class ChessBot{
         }
     }
 
-    determineSimplestBotMove(game, source, target){
+    determineSimplestBotMove(game){
         let possibleMoves = game.moves();
 
         if (possibleMoves.length === 0) return;
@@ -74,7 +74,7 @@ class ChessBot{
 
     evaluateBoardForBlack(game){return -this.evaluateBoardForWhite(game);}
 
-    determineNextBestBotMoveOneMoveDeep(game, source, target) {
+    determineNextBestBotMoveOneMoveDeep(game) {
         let bestMove = null;
         let bestValue = -9999;
         let boardValue = 0;
@@ -100,7 +100,7 @@ class ChessBot{
         }
 
         if (bestValue === 0) {
-            return this.determineSimplestBotMove(game, source, target);
+            return this.determineSimplestBotMove(game);
         } else {
             return bestMove;
         }
@@ -122,7 +122,7 @@ class ChessBot{
         }
         
         if (bestValue === 0) {
-            return this.determineSimplestBotMove(game, source, target);
+            return this.determineSimplestBotMove(game);
         } else {
             return bestMove;
         }
@@ -179,7 +179,7 @@ function setupChess(game, board, bot){
 
         if (move === null) return 'snapback';
 
-        window.setTimeout(bot.makeMove(game, board, source, target), 250);
+        window.setTimeout(bot.makeMove(game, board), 250);
     };
 
     let onSnapEnd = function() {
