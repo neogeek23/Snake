@@ -120,7 +120,12 @@ class ChessBot{
                 bestValue = currentValue;
             }
         }
-        return bestMove;
+        
+        if (bestValue === 0) {
+            return this.determineSimplestBotMove(game, source, target);
+        } else {
+            return bestMove;
+        }
     }
 
     mini_max_AB(depth, game, alpha, beta, isMaximizingPlayer){
