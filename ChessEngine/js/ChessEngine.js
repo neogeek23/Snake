@@ -15,7 +15,7 @@ class ChessBot{
         } else if (this.difficulty === 'Easy') {
             nextMove = this.determineNextBestBotMoveOneMoveDeep(game, source, target);
         } else if (this.difficulty === 'Medium'){
-            let depth = Math.floor(Math.random() * 3 + 2);
+            let depth = Math.floor(Math.random() * 1 + 2);
             console.clear();
             console.log(depth + " moves ahead.");
             nextMove = this.determineBestBotMove(depth, game, true);
