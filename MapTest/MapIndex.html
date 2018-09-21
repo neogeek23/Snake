@@ -3,13 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
-    <title>Map Project</title>
+    <title>Map Test</title>
     <link rel="stylesheet" href="MapStyle.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYLdhhoZZsQ1exYHzMSo_E8-7ymGmynpc&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKpBDSl3cCCCpgm6mouhbbh8j0Z93CDX0&callback=initMap"
             async defer></script>
     <script src="MapScript.js"></script>
 </head>
 <body>
     <div id="map"></div>
+    <div id="right-panel">
+        <div>
+            <b>Start:</b>
+            <select id="start">
+                <option value="32.9608558,-96.8530005">Home</option>
+                <option value="32.972469,-96.830857">Globe Runner</option>
+            </select>
+            <br>
+            <b>End:</b>
+            <select id="end">
+                <option value="32.972469,-96.830857">Globe Runner</option>
+                <option value="32.9608558,-96.8530005">Home</option>
+            </select>
+            <br>
+            <input type="submit" id="submit">
+        </div>
+        <div id="directions-panel"></div>
+    </div>
 </body>
 </html>
