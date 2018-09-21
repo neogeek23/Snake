@@ -23,7 +23,7 @@ function initMap() {
     unifocus = new google.maps.Marker({
         position: {lat: 32.9194354, lng: -96.9292158},
         map: map,
-        title: 'Globe Runner'
+        title: 'Unifocus'
     });
 }
 
