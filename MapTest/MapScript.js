@@ -1,3 +1,5 @@
+window.onload = function(){initMap();};
+
 function initMap() {
     let directionsService = new google.maps.DirectionsService;
     let directionsDisplay = new google.maps.DirectionsRenderer;
@@ -51,5 +53,3 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay){
         }
     });
 }
-
-initMap();
