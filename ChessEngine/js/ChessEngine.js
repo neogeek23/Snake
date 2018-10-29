@@ -25,7 +25,8 @@ class ChessBot{
             game.move(nextMove);
             board.position(game.fen());
         }else {
-            throw "difficulty not recognized" + this.difficulty;
+            alert("I concede, you win.  Could we rematch though, please?");
+            chess_main();
         }
     }
 
